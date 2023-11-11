@@ -1,0 +1,32 @@
+<app-topbar></app-topbar>
+<ul>
+  <li *ngFor="let itm of test">
+    <div class="left">
+      <div class="lol">
+        <div class="up">
+          {{itm.name}}
+        </div>
+        <div class="down">
+          {{itm.availability}}
+        </div>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="lol">
+        <div class="up">
+          {{itm.bags}}
+        </div>
+        <div class="down">
+          {{itm.distance}}
+        </div>
+      </div>
+      <div class="btn">
+        <span class="ctr">
+        Add to trip
+        </span>
+      </div>
+    </div>
+  </li>
+</ul>
+<app-bottombar></app-bottombar>
