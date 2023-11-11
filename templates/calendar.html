@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+<!-- Add this to the head section -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@3.10.2/dist/fullcalendar.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.10.2/dist/fullcalendar.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaupparinki</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333; /* Default text color */
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        main {
+            max-width: 600px; /* Adjust the max-width as needed */
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .calendar-container {
+            border-radius: 15px;
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            text-align: center; /* Center the text inside the boxes */
+        }
+
+        .calendar-container a {
+            color: #007BFF; /* Blue color for the calendar links */
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        nav {
+            background-color: #007BFF; /* Blue color */
+            color: white;
+            text-align: center;
+            padding: 15px; /* Increased padding for the navbar */
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            padding: 15px 20px; /* Adjusted padding for the navbar buttons */
+            margin: 0 10px;
+            border-radius: 8px;
+            background-color: #0056b3; /* Darker blue color */
+        }
+
+        /* Media Query for smaller screens */
+        @media only screen and (max-width: 600px) {
+            .calendar-container {
+                width: 80%; /* Adjust as needed */
+            }
+
+            nav a {
+                margin: 0 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Kaupparinki</h1>
+    </header>
+
+    <main>
+        <div class="calendar-container">
+            <h2>Calendar Page</h2>
+            <div id="calendar"></div>
+        </div>
+    </main>
+
+    <nav>
+        <a href="index.html">Ryhmät</a>
+        <a href="#">Kalenteri</a>
+        <a href="#profile">Profiili</a>
+    </nav>
+
+    <script>
+        $(document).ready(function () {
+            $('#calendar').fullCalendar({
+                // Add your calendar options and events here
+                header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'month,agendaWeek,agendaDay'
+                },
+                events: [
+                    // Add your calendar events here
+                    {
+                        title: 'Event 1',
+                        start: '2023-11-15T10:00:00',
+                        end: '2023-11-15T12:00:00'
+                    },
+                    {
+                        title: 'Event 2',
+                        start: '2023-11-18T14:00:00',
+                        end: '2023-11-18T16:00:00'
+                    }
+                ]
+            });
+        });
+    </script>
+
+</body>
+</html>
+
+</html>
